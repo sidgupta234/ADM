@@ -32,7 +32,7 @@ void bfs(int G[][size], int v){
 		//cout<<v<<endl;
 		for(int i=0; i<size; i++){
 			if(G[v][i]){
-				processEdge(G, Q, v, i);
+				processEdge(G, Q, v, i); // opportunity to explore edge.
 			}
 		}
 		Q.pop();
@@ -56,11 +56,11 @@ int main(){
 
 */
 	for(int i=0; i<size; i++){
-		color[i]=-1;
+		color[i]=-1; // leaving uncolored.
 	}
 
 	for(int i=0 ; i<size; i++){
-		if(color[i]== -1) // If uncolored
+		if(color[i]== -1) // If uncolored.
 			bfs(G, i);
 	}
 
